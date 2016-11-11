@@ -1,1 +1,1 @@
-# phpfox-session
+# phpfox-session-manager

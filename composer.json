@@ -1,6 +1,6 @@
 {
   "name": "codelego/phpfox-session-manager",
-  "description": "Session manager library",
+  "description": "Session manager library for phpfox framework.",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -12,8 +12,12 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Phpfox\\Session\\": "src/"
+      "Phpfox\\SessionManager\\": "src/"
     }
   },
-  "require": {}
+  "autoload-dev": {
+    "psr-4": {
+      "Phpfox\\SessionManager\\": "test/"
+    }
+  }
 }

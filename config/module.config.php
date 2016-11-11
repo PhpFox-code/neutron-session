@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpfox\Session;
+namespace Phpfox\SessionManager;
 
 return [
     'factories' => [
