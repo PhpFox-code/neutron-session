@@ -1,6 +1,6 @@
 {
-  "name": "codelego/phpfox-session",
-  "description": "PhpFox Session Component",
+  "name": "codelego/phpfox-session-manager",
+  "description": "Session manager library",
   "type": "library",
   "license": "MIT",
   "authors": [
