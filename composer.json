@@ -1,17 +1,18 @@
 {
-    "name": "phpredeye/phpfox-session",
-    "description": "PhpFox Session Component",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Nam Nguyen",
-            "email": "nam.ngvan@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Phpfox\\Session\\": "src/"
-        }
-    },
-    "require": {}
+  "name": "phpredeye/phpfox-session",
+  "description": "PhpFox Session Component",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Nam Nguyen",
+      "email": "nam.ngvan@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Phpfox\\Session\\": "src/"
+    }
+  },
+  "require": {}
 }

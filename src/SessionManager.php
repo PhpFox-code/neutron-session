@@ -22,22 +22,6 @@ class SessionManager
     }
 
     /**
-     * @return SaveHandlerInterface
-     */
-    public function getSaveHandler()
-    {
-        return $this->saveHandler;
-    }
-
-    /**
-     * @param SaveHandlerInterface $saveHandler
-     */
-    public function setSaveHandler($saveHandler)
-    {
-        $this->saveHandler = $saveHandler;
-    }
-
-    /**
      * Start session manager
      *
      * @return $this
@@ -51,5 +35,21 @@ class SessionManager
         session_set_save_handler($this->saveHandler);
 
         return $this;
+    }
+
+    /**
+     * @return SaveHandlerInterface
+     */
+    public function getSaveHandler()
+    {
+        return $this->saveHandler;
+    }
+
+    /**
+     * @param SaveHandlerInterface $saveHandler
+     */
+    public function setSaveHandler($saveHandler)
+    {
+        $this->saveHandler = $saveHandler;
     }
 }
