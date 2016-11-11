@@ -2,6 +2,7 @@
   "name": "codelego/phpfox-session",
   "description": "PhpFox Session Component",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Nam Nguyen",
