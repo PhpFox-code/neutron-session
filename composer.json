@@ -1,6 +1,6 @@
 {
   "name": "codelego/phpfox-session",
-  "description": "Session manager library for phpfox framework.",
+  "description": "Session library for phpfox framework.",
   "type": "library",
   "license": "MIT",
   "authors": [
