@@ -1,13 +1,13 @@
 <?php
 
-namespace Phpfox\SessionManager;
+namespace Phpfox\Session;
 
 use SessionHandlerInterface;
 
 /**
  * Interface SaveHandlerInterface
  *
- * @package Phpfox\SessionManager
+ * @package Phpfox\Session
  */
 interface SaveHandlerInterface extends SessionHandlerInterface
 {
