@@ -3,7 +3,7 @@
 namespace Phpfox\Session;
 
 return [
-    'factories' => [
-        'sessionManager' => SessionManagerFactory::class,
+    'services' => [
+        'session' => SessionManager::class,
     ],
 ];
