@@ -4,8 +4,6 @@ namespace Phpfox\Session;
 
 return [
     'services' => [
-        'map' => [
-            'session' => [null, SessionManager::class,],
-        ],
+        'session' => [null, SessionManager::class,],
     ],
 ];
