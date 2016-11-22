@@ -12,49 +12,43 @@ class SessionManager
     /**
      * @var SaveHandlerInterface
      */
-    private $saveHandler;
+    private $saveHandler = "files";
 
-    /**
-     * SessionManager constructor.
-     *
-     * @param SaveHandlerInterface $saveHandler
-     */
-    public function __construct(SaveHandlerInterface $saveHandler)
+    public function __construct()
     {
-        $this->saveHandler = $saveHandler;
+        if (session_id()) {
+            return;
+        }
 
-        $this->start();
+        // skip session storage
+        if (PHP_SAPI == 'cli') {
+            $this->saveHandler = new NullSaveHandler();
+            return;
+        }
+
+        $adapter = config('session.adapter');
+
+        if ($adapter['driver'] != 'files') {
+            $driver = config('session.drivers', $adapter['driver']);
+            $this->saveHandler = new $driver($adapter);
+        }
     }
 
     /**
      * Start session manager
      *
-     * @return $this
+     * @return bool always true.
      */
     public function start()
     {
         if (session_id()) {
-            return $this;
+            return false;
         }
 
         session_set_save_handler($this->saveHandler);
 
-        return $this;
-    }
+        @session_start();
 
-    /**
-     * @return SaveHandlerInterface
-     */
-    public function getSaveHandler()
-    {
-        return $this->saveHandler;
-    }
-
-    /**
-     * @param SaveHandlerInterface $saveHandler
-     */
-    public function setSaveHandler($saveHandler)
-    {
-        $this->saveHandler = $saveHandler;
+        return true;
     }
 }

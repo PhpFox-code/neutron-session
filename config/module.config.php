@@ -3,7 +3,13 @@
 namespace Phpfox\Session;
 
 return [
-    'services' => [
+    'session.drivers'  => [
+        'files'    => 'files',
+    ],
+    'session.adapter' => [
+        'driver'    => 'files',
+    ],
+    'services'         => [
         'session' => [null, SessionManager::class,],
     ],
 ];
