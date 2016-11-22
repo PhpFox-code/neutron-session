@@ -14,7 +14,7 @@ class SessionManager
      */
     private $saveHandler = "files";
 
-    public function __construct()
+    public function __construct($configs)
     {
         if (session_id()) {
             return;
@@ -26,11 +26,10 @@ class SessionManager
             return;
         }
 
-        $adapter = config('session.adapter');
-
-        if ($adapter['driver'] != 'files') {
-            $driver = config('session.drivers', $adapter['driver']);
-            $this->saveHandler = new $driver($adapter);
+        if ($configs['driver'] == 'files') {
+            $this->saveHandler = 'files';
+        } else {
+            $this->saveHandler = (new $configs['driver'])($configs);
         }
     }
 
