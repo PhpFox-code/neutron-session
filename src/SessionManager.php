@@ -19,7 +19,7 @@ class SessionManager
         if (session_id()) {
             return;
         }
-        
+
         // skip session storage
         if (PHP_SAPI == 'cli') {
             $this->saveHandler = new NullSaveHandler();
@@ -29,7 +29,8 @@ class SessionManager
         if ($configs['driver'] == 'files') {
             $this->saveHandler = 'files';
         } else {
-            $this->saveHandler = (new $configs['driver'])($configs);
+            $driver = new $configs['driver'];
+            $this->saveHandler = $driver($configs);
         }
     }
 
