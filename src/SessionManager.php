@@ -19,7 +19,7 @@ class SessionManager
         if (session_id()) {
             return;
         }
-
+        
         // skip session storage
         if (PHP_SAPI == 'cli') {
             $this->saveHandler = new NullSaveHandler();
