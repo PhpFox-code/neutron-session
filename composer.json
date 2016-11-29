@@ -1,5 +1,5 @@
 {
-  "name": "codelego/phpfox-session",
+  "name": "codelego/neutron-session",
   "description": "Session library for phpfox framework.",
   "type": "library",
   "license": "MIT",
