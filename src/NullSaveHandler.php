@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpfox\Session;
+namespace Neutron\Session;
 
 
 class NullSaveHandler implements SaveHandlerInterface

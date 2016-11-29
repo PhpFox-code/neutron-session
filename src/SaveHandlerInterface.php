@@ -1,13 +1,13 @@
 <?php
 
-namespace Phpfox\Session;
+namespace Neutron\Session;
 
 use SessionHandlerInterface;
 
 /**
  * Interface SaveHandlerInterface
  *
- * @package Phpfox\Session
+ * @package Neutron\Session
  */
 interface SaveHandlerInterface extends SessionHandlerInterface
 {

@@ -6,7 +6,7 @@
  * Time: 1:33 PM
  */
 
-namespace Phpfox\Session;
+namespace Neutron\Session;
 
 
 class SessionManagerTest extends \PHPUnit_Framework_TestCase

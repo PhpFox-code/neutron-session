@@ -1,11 +1,11 @@
 <?php
-namespace Phpfox\Session;
+namespace Neutron\Session;
 
 
 /**
  * Class SessionManager
  *
- * @package Phpfox\Session
+ * @package Neutron\Session
  */
 class SessionManager
 {
